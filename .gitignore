@@ -1,0 +1,10 @@
+# Ignore bower as bower install will load these
+bower_components/
+
+# Ignore node_module as npm install will load these
+node_modules/
+
+# Webstorm files
+.DS_Store
+.idea/
+public/.DS_Store
