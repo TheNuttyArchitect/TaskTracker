@@ -1,8 +1,5 @@
-//require('../config/db');
 var Sequelize = require('../config/db'),
-    DataTypes = require('sequelize'); //require('sequelize');
-
-
+    DataTypes = require('sequelize');
 
 module.exports = Sequelize.define('Client', {
         id: {
@@ -29,4 +26,5 @@ module.exports = Sequelize.define('Client', {
     {
         timestamps: false,
         tableName: 'Client'
-    });
+    }
+);
