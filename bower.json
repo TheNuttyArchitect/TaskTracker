@@ -2,11 +2,12 @@
   "name": "TaskTracker",
   "version": "0.0.1",
   "dependencies": {
-    "bootstrap":      "latest",
-    "font-awesome":   "latest",
-    "animate.css":    "latest",
-    "angular":        "latest",
-    "angular-route":  "latest",
-    "fuelux":         "~3.6.3"
+    "bootstrap":        "latest",
+    "font-awesome":     "latest",
+    "animate.css":      "latest",
+    "angular":          "latest",
+    "angular-route":    "latest",
+    "angular-ui-grid": "latest",
+    "fuelux":           "~3.6.3"
   }
 }
