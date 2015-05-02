@@ -1,5 +1,5 @@
 # Ignore bower as bower install will load these
-bower_components/
+public/libs
 
 # Ignore node_module as npm install will load these
 node_modules/
