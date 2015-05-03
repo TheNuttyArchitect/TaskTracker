@@ -21,8 +21,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 var routes = require('./routes/index');
 var clients = require('./routes/client_route');
 
-app.use('/', routes);
-app.use('/clients', clients);
+app.use('/api', routes);
+app.use('/api/clients', clients);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -55,4 +55,4 @@ app.use(function(err, req, res) {
   });
 });
 
-module.exports = app;
+exports = module.exports = app;

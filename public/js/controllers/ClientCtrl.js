@@ -1,3 +1,3 @@
-angular.module('ClientCntrl', []).controller('ClientController', function($scope){
+angular.module('ClientCtrl', []).controller('ClientController', function($scope){
 
 });
