@@ -4,8 +4,7 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var db = require('./config/db');
 var logger = require('morgan');
-var routes = require('./routes/index');
-var clients = require('./routes/client_route');
+
 
 var app = express();
 
@@ -17,6 +16,10 @@ app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(path.join(__dirname, 'public')));
+
+// routes
+var routes = require('./routes/index');
+var clients = require('./routes/client_route');
 
 app.use('/', routes);
 app.use('/clients', clients);
@@ -51,6 +54,5 @@ app.use(function(err, req, res) {
     error: {}
   });
 });
-
 
 module.exports = app;
