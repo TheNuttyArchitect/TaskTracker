@@ -18,10 +18,10 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // routes
-var routes = require('./routes/index');
+//var routes = require('./routes/index');
 var clients = require('./routes/client_route');
 
-app.use('/api', routes);
+//app.use('/api', routes);
 app.use('/api/clients', clients);
 
 // catch 404 and forward to error handler
