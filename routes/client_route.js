@@ -9,12 +9,3 @@ router.get('/', function(req,res){
 });
 
 module.exports = router;
-
-
-/*module.exports = function(app){
-    app.get('/api/clients', function(req,res){
-        client.findAll().then(function(clients){
-            res.json(clients);
-        });
-    });
-}*/

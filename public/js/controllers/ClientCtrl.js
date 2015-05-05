@@ -1,25 +1,16 @@
 angular.module('ClientCtrl', [])
     .controller('ClientController', ['$scope','ClientService',function($scope,ClientService){
-        /*$scope.gridOptions.columnDefs = [
-            {field: 'name', visible: true},
-            {field: 'id', visible: false},
-            {field: 'isActive', visible: true},
-            {field: 'createdDate', visible: true},
-            {field: 'modifiedDate', visible: true}
-        ];*/
-
         ClientService.getAll().success(function(data){
 
             $scope.clientGrid = {
                     columnDefs: [
-                        {field: 'name', visible: true},
+                        {field: 'name', width: 300},
                         {field: 'id', visible: false},
-                        {field: 'isActive', visible: true},
-                        {field: 'createdDate', visible: true},
-                        {field: 'modifiedDate', visible: true}
+                        {field: 'isActive', width: 50},
+                        {field: 'createdDate', width: 100, cellFilter: 'date:\'MM-dd-yyyy\''},
+                        {field: 'modifiedDate', width: 100, cellFilter: 'date:\'MM-dd-yyyy\''}
                     ],
                     data: data
                 };
         });
-            //[{FirstName: 'Fred', LastName: 'Flintstone'}];
     }]);
